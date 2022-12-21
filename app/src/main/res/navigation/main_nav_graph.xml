@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/artworksTypesPageFragment">
+    <fragment
+        android:id="@+id/artworksTypesPageFragment"
+        android:name="com.memksim.chickagogallery.ui.artworks_types_page.ArtworksTypesPageFragment"
+        android:label="ArtworksTypesPageFragment"
+        tools:layout="@layout/fragment_artworks_types_list">
+        <action
+            android:id="@+id/action_artworksTypesPageFragment_to_artworksPageFragment"
+            app:destination="@id/artworksPageFragment" />
+        <action
+            android:id="@+id/action_artworksTypesPageFragment_to_bookmarksPageFragment"
+            app:destination="@id/bookmarksPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/artworksPageFragment"
+        android:name="com.memksim.chickagogallery.ui.artworks_page.ArtworksPageFragment"
+        android:label="ArtworksPageFragment"
+        tools:layout="@layout/fragment_artworks_list">
+        <action
+            android:id="@+id/action_artworksPageFragment_to_artworksTypesPageFragment"
+            app:destination="@id/artworksTypesPageFragment" />
+        <argument
+            android:name="artworkType"
+            app:argType="com.memksim.chickagogallery.domain.model.ArtworkType"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_artworksPageFragment_to_artworkInfoPageFragment"
+            app:destination="@id/artworkInfoPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/artworkInfoPageFragment"
+        android:name="com.memksim.chickagogallery.ui.artworkInfo_page.ArtworkInfoPageFragment"
+        android:label="ArtworkInfoPageFragment"
+        tools:layout="@layout/fragment_artwork_info_page">
+        <action
+            android:id="@+id/action_artworkInfoPageFragment_to_artworksPageFragment"
+            app:destination="@id/artworksPageFragment" />
+        <argument
+            android:name="artwork"
+            app:argType="com.memksim.chickagogallery.domain.model.Artwork" />
+        <argument
+            android:name="artworkType"
+            app:argType="com.memksim.chickagogallery.domain.model.ArtworkType" />
+        <action
+            android:id="@+id/action_artworkInfoPageFragment_to_bookmarksPageFragment"
+            app:destination="@id/bookmarksPageFragment" />
+        <argument
+            android:name="fromWhat"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookmarksPageFragment"
+        android:name="com.memksim.chickagogallery.ui.bookmarks_page.BookmarksPageFragment"
+        android:label="BookmarksPageFragment"
+        tools:layout="@layout/fragment_bookmarks_list">
+        <action
+            android:id="@+id/action_bookmarksPageFragment_to_artworksTypesPageFragment"
+            app:destination="@id/artworksTypesPageFragment" />
+        <action
+            android:id="@+id/action_bookmarksPageFragment_to_artworkInfoPageFragment"
+            app:destination="@id/artworkInfoPageFragment" />
+    </fragment>
+</navigation>

@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">ChickagoGallery</string>
+    <string name="user_name_title">Имя пользователя</string>
+    <string name="button_text">Кнопка</string>
+    <string name="quit_text">Выйти</string>
+    <string name="tags_title">Тэги</string>
+    <string name="signature_title">Подпись:</string>
+    <string name="cards_list">Список карточек</string>
+    <string name="downloads_list">Список загрузок</string>
+    <string name="info">Информация</string>
+    <string name="submit">Подтвердить</string>
+    <string name="header_title">HeaderTitle</string>
+    <string name="header_text">HeaderText</string>
+    <string name="numbers_fragment">Numbers Fragment</string>
+    <string name="stage4_title">Этап-4</string>
+    <string name="numbers">numbers</string>
+    <string name="set_stage">Укажите этап</string>
+    <string name="grade">Средний балл:</string>
+    <string name="stage">Этап:</string>
+    <string name="trainees_fragment">Trainees Fragment</string>
+    <string name="start">Старт</string>
+    <string name="stop">Стоп</string>
+    <string name="thread_fragment">Thread Fragment</string>
+    <string name="search_view_default_hint">Введите название категории</string>
+    <string name="type_title">Тип:</string>
+    <string name="materials_title">Материалы:</string>
+    <string name="sizes_title">Размеры:</string>
+    <string name="gallery_title">Галерея:</string>
+    <string name="bookmarked_title">Избранное</string>
+    <string name="nothing_was_found">Ничего не было найдено</string>
+    <string name="nothing_bookmarked">У вас еще нет работ в избранном</string>
 </resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_4dp">4dp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="margin_21dp">21dp</dimen>
+    <dimen name="margin_30dp">30dp</dimen>
+    <dimen name="item_margin_22dp">22dp</dimen>
+    <dimen name="margin_11dp">11dp</dimen>
+    <dimen name="margin_12dp">12dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="margin_26dp">26dp</dimen>
+    <dimen name="margin_16dp">16dp</dimen>
+    <dimen name="margin_18dp">18dp</dimen>
+    <dimen name="margin_24dp">24dp</dimen>
+
+    <dimen name="padding_2dp">2dp</dimen>
+    <dimen name="padding_8dp">8dp</dimen>
+    <dimen name="padding_11dp">11dp</dimen>
+    <dimen name="padding_12dp">12dp</dimen>
+    <dimen name="padding_16dp">16dp</dimen>
+    <dimen name="padding_17dp">17dp</dimen>
+
+    <dimen name="corners_radius_12dp">12dp</dimen>
+    <dimen name="corners_radius_6dp">6dp</dimen>
+    <dimen name="corners_radius_10dp">10dp</dimen>
+
+    <dimen name="elevation_3dp">3dp</dimen>
+    <dimen name="elevation_6dp">6dp</dimen>
+
+    <dimen name="gap_6dp">6dp</dimen>
+
+    <dimen name="text_size_16sp">16sp</dimen>
+    <dimen name="text_size_14sp">14sp</dimen>
+    <dimen name="text_size_18sp">18sp</dimen>
+    <dimen name="text_size_11sp">11sp</dimen>
+    <dimen name="text_size_20sp">20sp</dimen>
+    <dimen name="text_size_24sp">24sp</dimen>
+
+    <dimen name="info_card_width">318dp</dimen>
+    <dimen name="view_holder_large_text_width">250dp</dimen>
+    <dimen name="header_height">150dp</dimen>
+    <dimen name="header_bottom_border_height">1dp</dimen>
+    <dimen name="search_field_items_space">42dp</dimen>
+    <dimen name="artwork_item_image_width">186dp</dimen>
+    <dimen name="artwork_item_image_height">138dp</dimen>
+    <dimen name="bookmark_icon_size">100dp</dimen>
+    <dimen name="search_icon_width">64dp</dimen>
+    <dimen name="search_icon_height">62dp</dimen>
+</resources>

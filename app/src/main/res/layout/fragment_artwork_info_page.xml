@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="top">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/MaterialToolbarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_back" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/artworkImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                tools:src="@drawable/filler_art"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/startGuideline"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/margin_16dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/endGuideline"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/margin_16dp" />
+
+            <TextView
+                android:id="@+id/artworkTitle"
+                style="@style/ArtworkInfoPageNameTitleStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_26dp"
+                app:layout_constraintEnd_toStartOf="@+id/bookmarkIcon"
+                app:layout_constraintStart_toStartOf="@id/startGuideline"
+                app:layout_constraintTop_toBottomOf="@id/artworkImage"
+                tools:text="Название" />
+
+            <ImageView
+                android:id="@+id/bookmarkIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/endGuideline"
+                app:layout_constraintTop_toTopOf="@id/artworkTitle"
+                tools:src="@drawable/ic_bookmark" />
+
+            <TextView
+                android:id="@+id/dateTitle"
+                style="@style/ArtworkInfoPageInfoTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                app:layout_constraintStart_toStartOf="@id/startGuideline"
+                app:layout_constraintTop_toBottomOf="@id/artworkTitle"
+                tools:text="1972" />
+
+            <TextView
+                android:id="@+id/artistNameTitle"
+                style="@style/LargeTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                app:layout_constraintStart_toStartOf="@id/startGuideline"
+                app:layout_constraintTop_toBottomOf="@id/dateTitle"
+                tools:text="Автор Имя" />
+
+            <TextView
+                android:id="@+id/artworkTypeTitle"
+                style="@style/ArtworkInfoPageInfoTitleTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:text="@string/type_title"
+                app:layout_constraintStart_toStartOf="@id/startGuideline"
+                app:layout_constraintTop_toBottomOf="@id/artistNameTitle" />
+
+            <TextView
+                android:id="@+id/artworkTypeInfo"
+                style="@style/ArtworkInfoPageInfoTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8dp"
+                app:layout_constraintBottom_toBottomOf="@id/artworkTypeTitle"
+                app:layout_constraintStart_toEndOf="@id/artworkTypeTitle"
+                app:layout_constraintTop_toTopOf="@id/artworkTypeTitle"
+                tools:text="{artwork_type}" />
+
+            <TextView
+                android:id="@+id/materialsTitle"
+                style="@style/ArtworkInfoPageInfoTitleTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:text="@string/materials_title"
+                app:layout_constraintStart_toStartOf="@id/startGuideline"
+                app:layout_constraintTop_toBottomOf="@id/artworkTypeTitle" />
+
+            <TextView
+                android:id="@+id/materialsInfo"
+                style="@style/ArtworkInfoPageInfoTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8dp"
+                app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+                app:layout_constraintStart_toEndOf="@id/materialsTitle"
+                app:layout_constraintTop_toTopOf="@id/materialsTitle"
+                tools:text="{materials_title}" />
+
+            <TextView
+                android:id="@+id/sizesTitle"
+                style="@style/ArtworkInfoPageInfoTitleTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:text="@string/sizes_title"
+                app:layout_constraintStart_toStartOf="@id/startGuideline"
+                app:layout_constraintTop_toBottomOf="@id/materialsInfo" />
+
+            <TextView
+                android:id="@+id/sizesInfo"
+                style="@style/ArtworkInfoPageInfoTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8dp"
+                app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+                app:layout_constraintStart_toEndOf="@id/sizesTitle"
+                app:layout_constraintTop_toTopOf="@id/sizesTitle"
+                tools:text="{sizes_title}" />
+
+            <TextView
+                android:id="@+id/galleryTitle"
+                style="@style/ArtworkInfoPageInfoTitleTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:text="@string/gallery_title"
+                app:layout_constraintStart_toStartOf="@id/startGuideline"
+                app:layout_constraintTop_toBottomOf="@id/sizesInfo" />
+
+            <TextView
+                android:id="@+id/galleryInfo"
+                style="@style/ArtworkInfoPageInfoTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8dp"
+                app:layout_constraintStart_toEndOf="@id/galleryTitle"
+                app:layout_constraintTop_toTopOf="@id/galleryTitle"
+                tools:text="{gallery_title}" />
+
+            <TextView
+                android:id="@+id/artworkLargeInfo"
+                style="@style/ArtworkInfoPageInfoTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/endGuideline"
+                app:layout_constraintStart_toStartOf="@id/startGuideline"
+                app:layout_constraintTop_toBottomOf="@id/galleryInfo"
+                tools:text="Описание длинное, Описание длинное, Описание длинное, Описание длинное, Описание длинное, Описание длинное, Описание длинное, Описание длинное, Описание длинное, Описание длинное, Описание длинное, Описание длинное" />
+
+            <TextView
+                android:id="@+id/creditLineInfo"
+                style="@style/ArtworkInfoPageInfoTitleTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginBottom="@dimen/margin_8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+                app:layout_constraintStart_toEndOf="@id/startGuideline"
+                app:layout_constraintTop_toBottomOf="@id/artworkLargeInfo"
+                tools:text="{credit_line}" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
+
+
+
