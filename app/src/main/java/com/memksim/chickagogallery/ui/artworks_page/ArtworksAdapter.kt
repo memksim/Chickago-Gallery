@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.memksim.chickagogallery.databinding.ArtworkItemLayoutBinding
-import com.memksim.chickagogallery.ui.setBookmarkIconDrawable
+import com.memksim.chickagogallery.ui.utils.extensions.setBookmarkIconDrawable
 
 class ArtworksDiffCallback(
     private val oldList: List<ArtworksPageItemUiState>,

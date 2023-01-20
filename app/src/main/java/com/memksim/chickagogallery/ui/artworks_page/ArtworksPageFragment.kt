@@ -13,7 +13,7 @@ import com.memksim.chickagogallery.databinding.FragmentArtworksListBinding
 import com.memksim.chickagogallery.converters.convertArtworksPageItemUiStateToArtwork
 import com.memksim.chickagogallery.converters.convertArtworksPageItemUiStateToArtworkType
 import com.memksim.chickagogallery.domain.model.ArtworkType
-import com.memksim.chickagogallery.ui.ParentFragment
+import com.memksim.chickagogallery.ui.base.ParentFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 const val ARTWORK_PAGE_TAG = "ArtworksPageFragment"

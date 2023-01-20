@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.memksim.chickagogallery.R
 import com.memksim.chickagogallery.databinding.FragmentArtworksTypesListBinding
 import com.memksim.chickagogallery.converters.convertArtworksTypesPageItemUiStateToArtworkType
-import com.memksim.chickagogallery.ui.ParentFragment
+import com.memksim.chickagogallery.ui.base.ParentFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

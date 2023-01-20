@@ -8,7 +8,7 @@ import com.memksim.chickagogallery.domain.interactors.LoadArtworksInteractor
 import com.memksim.chickagogallery.domain.interactors.UpdateBookmarksTableInteractor
 import com.memksim.chickagogallery.domain.model.Artwork
 import com.memksim.chickagogallery.domain.model.ArtworkType
-import com.memksim.chickagogallery.ui.SearchViewModel
+import com.memksim.chickagogallery.ui.base.SearchViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.*
 import javax.inject.Inject
@@ -92,7 +92,11 @@ class ArtworksViewModel @Inject constructor(
         )
 
         viewModelScope.launch {
-            updateBookmarksTableInteractor.invoke(bookmark = bookmark)
+            updateBookmarksTableInteractor.invoke(
+                bookmark = bookmark,
+                isOnline = true, //TODO
+                failureListener = null
+            )
         }
     }
 

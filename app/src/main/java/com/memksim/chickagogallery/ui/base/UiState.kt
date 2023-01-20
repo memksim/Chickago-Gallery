@@ -1,4 +1,4 @@
-package com.memksim.chickagogallery.ui
+package com.memksim.chickagogallery.ui.base
 
 interface UiState
 

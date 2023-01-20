@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "955222466048",
+    "project_id": "gallery-49c8d",
+    "storage_bucket": "gallery-49c8d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955222466048:android:3cc9a5edb0a862dc7e82e5",
+        "android_client_info": {
+          "package_name": "com.memksim.chickagogallery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955222466048-lka62t5dlojmbrocgghau7f6bvev0ra3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvK-BgG1NdE4YalFwOLQhfdvSkeazM9Mw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955222466048-lka62t5dlojmbrocgghau7f6bvev0ra3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

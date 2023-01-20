@@ -10,9 +10,9 @@ import coil.load
 import com.memksim.chickagogallery.R
 import com.memksim.chickagogallery.databinding.FragmentArtworkInfoPageBinding
 import com.memksim.chickagogallery.converters.convertArtworkInfoPageItemUiStateToArtworkType
-import com.memksim.chickagogallery.ui.ParentFragment
+import com.memksim.chickagogallery.ui.base.ParentFragment
 import com.memksim.chickagogallery.ui.bookmarks_page.BOOKMARK_PAGE_TAG
-import com.memksim.chickagogallery.ui.setBookmarkIconDrawable
+import com.memksim.chickagogallery.ui.utils.extensions.setBookmarkIconDrawable
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

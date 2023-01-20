@@ -1,7 +1,7 @@
 package com.memksim.chickagogallery.ui.artworks_page
 
-import com.memksim.chickagogallery.ui.ItemUiState
-import com.memksim.chickagogallery.ui.UiState
+import com.memksim.chickagogallery.ui.base.ItemUiState
+import com.memksim.chickagogallery.ui.base.UiState
 
 data class ArtworksPageUiState(
     val itemsList: List<ArtworksPageItemUiState>,

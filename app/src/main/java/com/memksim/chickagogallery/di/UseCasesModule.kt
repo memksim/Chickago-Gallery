@@ -1,5 +1,6 @@
 package com.memksim.chickagogallery.di
 
+import com.memksim.chickagogallery.data.repository.FirestoreRepository
 import com.memksim.chickagogallery.data.repository.LocalRepository
 import com.memksim.chickagogallery.data.repository.RemoteRepository
 import com.memksim.chickagogallery.domain.use_cases.*
@@ -36,4 +37,11 @@ class UseCasesModule {
     fun provideGetBookmarksByArtworkTypeUseCase(repository: LocalRepository): GetBookmarksByArtworkTypeUseCase =
         GetBookmarksByArtworkTypeUseCase(repository = repository)
 
+    @Provides
+    fun provideAddToRemoteBookmarksUseCase(repository: FirestoreRepository): AddToRemoteBookmarksUseCase =
+        AddToRemoteBookmarksUseCase(repository = repository)
+
+    @Provides
+    fun provideGetRemoteBookmarksUseCase(repository: FirestoreRepository): GetRemoteBookmarksUseCase =
+        GetRemoteBookmarksUseCase(repository = repository)
 }

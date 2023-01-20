@@ -1,9 +1,10 @@
-package com.memksim.chickagogallery.ui
+package com.memksim.chickagogallery.ui.base
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.memksim.chickagogallery.ui.utils.UI_DEBOUNCE
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

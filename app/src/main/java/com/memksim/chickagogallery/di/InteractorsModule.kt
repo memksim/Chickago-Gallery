@@ -1,11 +1,9 @@
 package com.memksim.chickagogallery.di
 
+import com.memksim.chickagogallery.domain.interactors.GetBookmarksInteractor
 import com.memksim.chickagogallery.domain.interactors.LoadArtworksInteractor
 import com.memksim.chickagogallery.domain.interactors.UpdateBookmarksTableInteractor
-import com.memksim.chickagogallery.domain.use_cases.AddToBookmarksUseCase
-import com.memksim.chickagogallery.domain.use_cases.GetArtworksUseCase
-import com.memksim.chickagogallery.domain.use_cases.GetBookmarksByArtworkTypeUseCase
-import com.memksim.chickagogallery.domain.use_cases.RemoveBookmarksUseCase
+import com.memksim.chickagogallery.domain.use_cases.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -27,10 +25,23 @@ class InteractorsModule {
     @Provides
     fun provideUpdateBookmarksTableInteractor(
         addToBookmarksUseCase: AddToBookmarksUseCase,
-        removeBookmarksUseCase: RemoveBookmarksUseCase
+        addToRemoteBookmarksUseCase: AddToRemoteBookmarksUseCase,
+        removeBookmarksUseCase: RemoveBookmarksUseCase,
+        removeRemoteBookmarksUseCase: AddToRemoteBookmarksUseCase
     ): UpdateBookmarksTableInteractor = UpdateBookmarksTableInteractor(
         addToBookmarksUseCase = addToBookmarksUseCase,
-        removeBookmarksUseCase = removeBookmarksUseCase
+        addToRemoteBookmarksUseCase = addToRemoteBookmarksUseCase,
+        removeBookmarksUseCase = removeBookmarksUseCase,
+        removeRemoteBookmarksUseCase = removeRemoteBookmarksUseCase
+    )
+
+    @Provides
+    fun provideGetBookmarksInteractor(
+        getBookmarksUseCase: GetBookmarksUseCase,
+        getRemoteBookmarksUseCase: GetRemoteBookmarksUseCase
+    ): GetBookmarksInteractor = GetBookmarksInteractor(
+        getBookmarksUseCase = getBookmarksUseCase,
+        getRemoteBookmarksUseCase = getRemoteBookmarksUseCase
     )
 
 }

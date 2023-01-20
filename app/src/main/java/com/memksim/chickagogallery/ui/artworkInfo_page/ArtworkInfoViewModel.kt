@@ -43,7 +43,7 @@ class ArtworkInfoViewModel @Inject constructor(
                 artworkType = artworkType
             )
         ) {
-            updateBookmarkLocal(itemState = _liveData.value?.itemState)
+            updateBookmark(itemState = _liveData.value?.itemState)
             updateState(
                 artwork.copy(isBookmarked = !artwork.isBookmarked),
                 artworkType
@@ -52,13 +52,15 @@ class ArtworkInfoViewModel @Inject constructor(
     }
 
 
-    private fun updateBookmarkLocal(itemState: ArtworkInfoPageItemUiState?) {
+    private fun updateBookmark(itemState: ArtworkInfoPageItemUiState?) {
         itemState ?: return
         viewModelScope.launch {
             updateBookmarksTableInteractor.invoke(
-                convertArtworkInfoPageItemUiStateToBookmark(
+                bookmark = convertArtworkInfoPageItemUiStateToBookmark(
                     item = itemState.copy(isBookmarked = !itemState.isBookmarked)
-                )
+                ),
+                isOnline = true, //TODO
+                failureListener = null
             )
         }
     }

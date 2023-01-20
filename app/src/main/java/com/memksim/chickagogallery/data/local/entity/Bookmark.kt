@@ -23,4 +23,24 @@ data class Bookmark(
     val publicationHistory: String,
     val exhibitionHistory: String,
     val provenanceText: String
-)
+){
+
+    constructor(): this(
+        0,
+        "",
+        "",
+        "",
+        "",
+        false,
+        0,
+        "",
+        "",
+        "",
+        "",
+        emptyList(),
+        "",
+        "",
+        "",
+    )
+
+}

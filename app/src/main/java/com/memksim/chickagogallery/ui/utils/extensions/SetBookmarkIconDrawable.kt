@@ -1,4 +1,4 @@
-package com.memksim.chickagogallery.ui
+package com.memksim.chickagogallery.ui.utils.extensions
 
 import android.content.res.Resources
 import android.widget.ImageView

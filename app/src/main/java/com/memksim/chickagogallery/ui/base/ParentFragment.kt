@@ -1,6 +1,5 @@
-package com.memksim.chickagogallery.ui
+package com.memksim.chickagogallery.ui.base
 
-import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.annotation.LayoutRes
