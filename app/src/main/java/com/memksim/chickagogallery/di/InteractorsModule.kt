@@ -25,23 +25,17 @@ class InteractorsModule {
     @Provides
     fun provideUpdateBookmarksTableInteractor(
         addToBookmarksUseCase: AddToBookmarksUseCase,
-        addToRemoteBookmarksUseCase: AddToRemoteBookmarksUseCase,
-        removeBookmarksUseCase: RemoveBookmarksUseCase,
-        removeRemoteBookmarksUseCase: AddToRemoteBookmarksUseCase
+        removeBookmarksUseCase: RemoveBookmarksUseCase
     ): UpdateBookmarksTableInteractor = UpdateBookmarksTableInteractor(
         addToBookmarksUseCase = addToBookmarksUseCase,
-        addToRemoteBookmarksUseCase = addToRemoteBookmarksUseCase,
-        removeBookmarksUseCase = removeBookmarksUseCase,
-        removeRemoteBookmarksUseCase = removeRemoteBookmarksUseCase
+        removeBookmarksUseCase = removeBookmarksUseCase
     )
 
     @Provides
     fun provideGetBookmarksInteractor(
-        getBookmarksUseCase: GetBookmarksUseCase,
-        getRemoteBookmarksUseCase: GetRemoteBookmarksUseCase
+        getBookmarksUseCase: GetBookmarksUseCase
     ): GetBookmarksInteractor = GetBookmarksInteractor(
-        getBookmarksUseCase = getBookmarksUseCase,
-        getRemoteBookmarksUseCase = getRemoteBookmarksUseCase
+        getBookmarksUseCase = getBookmarksUseCase
     )
 
 }

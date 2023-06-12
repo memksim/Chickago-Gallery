@@ -93,9 +93,7 @@ class ArtworksViewModel @Inject constructor(
 
         viewModelScope.launch {
             updateBookmarksTableInteractor.invoke(
-                bookmark = bookmark,
-                isOnline = true, //TODO
-                failureListener = null
+                bookmark = bookmark
             )
         }
     }

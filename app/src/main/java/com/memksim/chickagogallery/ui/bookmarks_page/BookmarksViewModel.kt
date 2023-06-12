@@ -21,11 +21,7 @@ class BookmarksViewModel @Inject constructor(
 
     fun loadBookmarksList() {
         viewModelScope.launch {
-            updateState(bookmarks = getBookmarksInteractor
-                .invoke(
-                    isOnline = true,//TODO
-                    failureListener = null
-                )
+            updateState(bookmarks = getBookmarksInteractor()
             )
         }
     }
@@ -47,12 +43,7 @@ class BookmarksViewModel @Inject constructor(
 
     private fun removeBookmark(item: BookmarksPageItemUiState) {
         viewModelScope.launch {
-            updateBookmarksTableInteractor
-                .invoke(
-                    bookmark = convertBookmarksPageItemUiStateToBookmark(item),
-                    isOnline = true, //Todo
-                    failureListener = null
-                )
+            updateBookmarksTableInteractor(bookmark = convertBookmarksPageItemUiStateToBookmark(item))
         }
         val stateList = _liveData.value?.itemsList ?: emptyList()
         updateState(

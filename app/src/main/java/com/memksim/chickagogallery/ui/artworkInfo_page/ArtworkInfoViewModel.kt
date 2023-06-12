@@ -58,9 +58,7 @@ class ArtworkInfoViewModel @Inject constructor(
             updateBookmarksTableInteractor.invoke(
                 bookmark = convertArtworkInfoPageItemUiStateToBookmark(
                     item = itemState.copy(isBookmarked = !itemState.isBookmarked)
-                ),
-                isOnline = true, //TODO
-                failureListener = null
+                )
             )
         }
     }
