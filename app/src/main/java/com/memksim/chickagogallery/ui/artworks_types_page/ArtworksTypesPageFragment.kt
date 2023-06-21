@@ -11,9 +11,7 @@ import com.memksim.chickagogallery.R
 import com.memksim.chickagogallery.databinding.FragmentArtworksTypesListBinding
 import com.memksim.chickagogallery.converters.convertArtworksTypesPageItemUiStateToArtworkType
 import com.memksim.chickagogallery.ui.base.ParentFragment
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class ArtworksTypesPageFragment :
     ParentFragment<FragmentArtworksTypesListBinding>(
         R.layout.fragment_artworks_types_list,

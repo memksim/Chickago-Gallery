@@ -20,3 +20,20 @@ fun convertBookmarkToArtwork(
     exhibitionHistory = bookmark.exhibitionHistory,
     provenanceText = bookmark.provenanceText
 )
+fun toArtwork(isBookmarked: Boolean = false): Artwork {
+    return Artwork(
+        id = id,
+        title = title,
+        date = date,
+        artist = artist ?: "Unknown",
+        imageUrl = BASE_URL + imageId + TAIL,
+        isBookmarked = isBookmarked,
+        creditLine = creditLine.orEmpty(),
+        size = size.orEmpty(),
+        gallery = gallery.orEmpty(),
+        materials = materials.orEmpty(),
+        publicationHistory = publicationHistory.orEmpty(),
+        exhibitionHistory = exhibitionHistory.orEmpty(),
+        provenanceText = provenanceText.orEmpty()
+    )
+}

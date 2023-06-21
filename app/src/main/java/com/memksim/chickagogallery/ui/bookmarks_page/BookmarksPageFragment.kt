@@ -14,11 +14,9 @@ import com.memksim.chickagogallery.converters.convertBookmarksPageItemUiStateToB
 import com.memksim.chickagogallery.domain.convertBookmarkToArtwork
 import com.memksim.chickagogallery.domain.model.ArtworkType
 import com.memksim.chickagogallery.ui.base.ParentFragment
-import dagger.hilt.android.AndroidEntryPoint
 
 const val BOOKMARK_PAGE_TAG = "BookmarksPageFragment"
 
-@AndroidEntryPoint
 class BookmarksPageFragment :
     ParentFragment<FragmentBookmarksListBinding>(
         R.layout.fragment_bookmarks_list,

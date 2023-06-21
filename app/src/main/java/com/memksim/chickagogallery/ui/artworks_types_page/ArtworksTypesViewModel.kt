@@ -5,11 +5,9 @@ import com.memksim.chickagogallery.converters.convertArtworkTypesListToArtworksT
 import com.memksim.chickagogallery.domain.model.ArtworkType
 import com.memksim.chickagogallery.domain.use_cases.GetArtworksTypesUseCase
 import com.memksim.chickagogallery.ui.base.SearchViewModel
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-@HiltViewModel
 class ArtworksTypesViewModel @Inject constructor(
     private val getArtworksTypesUseCase: GetArtworksTypesUseCase
 ) : SearchViewModel<ArtworksTypesPageUiState, ArtworksTypesPageItemUiState>() {

@@ -9,11 +9,9 @@ import com.memksim.chickagogallery.converters.convertToArtworkInfoPageItemUiStat
 import com.memksim.chickagogallery.domain.interactors.UpdateBookmarksTableInteractor
 import com.memksim.chickagogallery.domain.model.Artwork
 import com.memksim.chickagogallery.domain.model.ArtworkType
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-@HiltViewModel
 class ArtworkInfoViewModel @Inject constructor(
     private val updateBookmarksTableInteractor: UpdateBookmarksTableInteractor
 ) : ViewModel() {

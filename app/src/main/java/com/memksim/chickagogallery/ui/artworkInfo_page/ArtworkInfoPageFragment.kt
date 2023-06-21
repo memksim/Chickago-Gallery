@@ -13,9 +13,7 @@ import com.memksim.chickagogallery.converters.convertArtworkInfoPageItemUiStateT
 import com.memksim.chickagogallery.ui.base.ParentFragment
 import com.memksim.chickagogallery.ui.bookmarks_page.BOOKMARK_PAGE_TAG
 import com.memksim.chickagogallery.ui.utils.extensions.setBookmarkIconDrawable
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class ArtworkInfoPageFragment : ParentFragment<FragmentArtworkInfoPageBinding>(
     R.layout.fragment_artwork_info_page,
     FragmentArtworkInfoPageBinding::bind

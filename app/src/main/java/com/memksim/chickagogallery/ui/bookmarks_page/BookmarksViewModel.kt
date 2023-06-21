@@ -1,6 +1,5 @@
 package com.memksim.chickagogallery.ui.bookmarks_page
 
-import android.util.Log
 import androidx.lifecycle.viewModelScope
 import com.memksim.chickagogallery.converters.convertBookmarkListToBookmarksPageItemUiStateList
 import com.memksim.chickagogallery.converters.convertBookmarksPageItemUiStateListToBookmarkList
@@ -9,11 +8,9 @@ import com.memksim.chickagogallery.data.local.entity.Bookmark
 import com.memksim.chickagogallery.domain.interactors.GetBookmarksInteractor
 import com.memksim.chickagogallery.domain.interactors.UpdateBookmarksTableInteractor
 import com.memksim.chickagogallery.ui.base.SearchViewModel
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-@HiltViewModel
 class BookmarksViewModel @Inject constructor(
     private val getBookmarksInteractor: GetBookmarksInteractor,
     private val updateBookmarksTableInteractor: UpdateBookmarksTableInteractor

@@ -1,9 +1,13 @@
-package com.memksim.chickagogallery.data.remote.entities
+package com.memksim.chickagogallery.remote.model
 
 import com.google.gson.annotations.SerializedName
-import com.memksim.chickagogallery.domain.model.ArtworkType
 
 data class ArtworkTypeResponseList(
     @SerializedName("data")
     val artworkTypes: List<ArtworkType>
-)
+) {
+    data class ArtworkType(
+        val id: Int,
+        val title: String
+    )
+}

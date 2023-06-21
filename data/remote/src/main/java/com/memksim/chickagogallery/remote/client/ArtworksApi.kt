@@ -1,7 +1,7 @@
-package com.memksim.chickagogallery.data.remote.client
+package com.memksim.chickagogallery.remote.client
 
-import com.memksim.chickagogallery.data.remote.entities.ArtworkResponse
-import com.memksim.chickagogallery.data.remote.entities.ArtworkTypeResponseList
+import com.memksim.chickagogallery.remote.model.ArtworksResponse
+import com.memksim.chickagogallery.remote.model.ArtworkTypeResponseList
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -22,6 +22,6 @@ interface ArtworksApi {
     suspend fun getArtworks(
         @Query("query[term][artwork_type_id]") artworkTypeId: Int,
         @Query("fields") fields: String = "id,title,image_id,artist_title,config,material_titles,credit_line,dimensions,date_display,image_id,gallery_title"
-    ): ArtworkResponse
+    ): ArtworksResponse
 
 }
