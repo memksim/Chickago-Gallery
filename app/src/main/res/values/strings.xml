@@ -21,7 +21,6 @@
     <string name="start">Старт</string>
     <string name="stop">Стоп</string>
     <string name="thread_fragment">Thread Fragment</string>
-    <string name="search_view_default_hint">Введите название категории</string>
     <string name="type_title">Тип:</string>
     <string name="materials_title">Материалы:</string>
     <string name="sizes_title">Размеры:</string>

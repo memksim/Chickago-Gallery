@@ -15,3 +15,12 @@ dependencyResolutionManagement {
 rootProject.name = "ChickagoGallery"
 include ':app'
 include ':data:remote'
+include ':feature:main_page'
+include ':core:base'
+include ':core:util'
+include ':feature:types_page'
+include ':feature:artwork_page'
+include ':feature:bookmarks_page'
+include ':data:local'
+include ':core:view'
+include ':core:view_extension'
